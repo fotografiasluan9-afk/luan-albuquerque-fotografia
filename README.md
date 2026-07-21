@@ -4,7 +4,8 @@ Site institucional (landing page) da marca **Luan Albuquerque Fotografia**.
 
 ## Site online
 
-Após a publicação, o link público ficará disponível neste repositório (GitHub Pages / Vercel).
+- **Site:** https://fotografiasluan9-afk.github.io/luan-albuquerque-fotografia/
+- **Repositório:** https://github.com/fotografiasluan9-afk/luan-albuquerque-fotografia
 
 ## Como editar textos e contatos
 
