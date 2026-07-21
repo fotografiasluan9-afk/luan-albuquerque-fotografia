@@ -263,7 +263,7 @@ button {
   position: relative;
   min-height: 100svh;
   display: grid;
-  align-items: end;
+  align-items: center;
   background: var(--forest);
   color: var(--cream);
   overflow: hidden;
@@ -309,43 +309,47 @@ button {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 7.5rem 0 4.5rem;
-  max-width: 38rem;
+  padding: 6.5rem 0 3.5rem;
+  max-width: 40rem;
 }
 
 .hero-logo {
-  width: min(100%, 280px);
-  margin-bottom: 1.75rem;
+  width: min(100%, 240px);
+  margin-bottom: 1.5rem;
   opacity: 0;
   animation: rise 1s var(--ease) 0.15s forwards;
 }
 
 .hero h1 {
-  font-size: clamp(2.1rem, 5.5vw, 3.35rem);
-  font-weight: 650;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero .slogan {
+  font-size: clamp(1.55rem, 4vw, 2.35rem);
+  color: var(--cream);
+  font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.08;
+  line-height: 1.2;
   margin-bottom: 0.85rem;
   opacity: 0;
   animation: rise 1s var(--ease) 0.28s forwards;
 }
 
-.hero .slogan {
-  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  color: var(--cream-dim);
-  font-weight: 350;
-  margin-bottom: 0.65rem;
-  opacity: 0;
-  animation: rise 1s var(--ease) 0.4s forwards;
-}
-
 .hero .tagline {
-  font-size: 0.98rem;
-  color: rgba(242, 242, 233, 0.55);
+  font-size: 1.05rem;
+  color: rgba(242, 242, 233, 0.62);
   max-width: 28rem;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: rise 1s var(--ease) 0.5s forwards;
+  animation: rise 1s var(--ease) 0.4s forwards;
 }
 
 .hero-actions {
@@ -353,7 +357,17 @@ button {
   flex-wrap: wrap;
   gap: 0.75rem;
   opacity: 0;
-  animation: rise 1s var(--ease) 0.62s forwards;
+  animation: rise 1s var(--ease) 0.52s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo,
+  .hero .slogan,
+  .hero .tagline,
+  .hero-actions {
+    opacity: 1;
+    animation: none;
+  }
 }
 
 @keyframes rise {
