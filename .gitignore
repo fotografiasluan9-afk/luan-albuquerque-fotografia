@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+.DS_Store
+supabase/.db-password.local
+supabase/.temp/
+.netlify/
+.env
+.env.local

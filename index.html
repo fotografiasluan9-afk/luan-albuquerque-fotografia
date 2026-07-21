@@ -2,7 +2,11 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>Luan Albuquerque Fotografia</title>
     <meta
       name="description"
@@ -23,13 +27,14 @@
       <div class="container">
         <nav class="nav" aria-label="Principal">
           <a class="nav-brand" href="#topo" aria-label="Luan Albuquerque Fotografia">
-            <img src="assets/brand/logo-white.svg" alt="" width="120" height="48" />
+            <img src="assets/brand/logo-mark.png" alt="" width="120" height="120" />
           </a>
 
           <ul class="nav-links">
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#portfolio">Portfólio</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
 
@@ -43,9 +48,7 @@
             id="nav-toggle"
           >
             <span aria-hidden="true"></span>
-            <span class="visually-hidden" style="position: absolute; width: 1px; height: 1px; overflow: hidden"
-              >Menu</span
-            >
+            <span class="visually-hidden">Menu</span>
           </button>
         </nav>
 
@@ -53,6 +56,7 @@
           <a href="#servicos">Serviços</a>
           <a href="#portfolio">Portfólio</a>
           <a href="#sobre">Sobre</a>
+          <a href="#avaliacoes">Avaliações</a>
           <a href="#contato">Contato</a>
           <a class="btn btn-primary" data-whatsapp href="#">Falar no WhatsApp</a>
         </div>
@@ -61,14 +65,14 @@
 
     <main id="topo">
       <section class="hero grain" aria-label="Apresentação">
-        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-media" id="hero-media" aria-hidden="true"></div>
         <div class="container hero-content">
           <img
             class="hero-logo"
-            src="assets/brand/logo-white.svg"
+            src="assets/brand/logo-mark.png"
             alt="Luan Albuquerque Fotografia"
             width="280"
-            height="112"
+            height="280"
           />
           <h1 id="site-name">Luan Albuquerque Fotografia</h1>
           <p class="slogan" id="slogan">Fotografando seus melhores momentos.</p>
@@ -127,6 +131,80 @@
         </div>
       </section>
 
+      <section class="section" id="avaliacoes">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Avaliações</span>
+            <h2>O que dizem os clientes</h2>
+            <p>
+              Deixe sua nota e um comentário — ajuda outras pessoas a conhecerem o
+              trabalho. Pode usar seu nome ou Instagram.
+            </p>
+          </div>
+
+          <div class="reviews-summary reveal" id="reviews-summary" hidden>
+            <p class="reviews-avg">
+              <span id="reviews-avg-value">—</span>
+              <span class="reviews-avg-stars" id="reviews-avg-stars" aria-hidden="true"></span>
+            </p>
+            <p class="reviews-count" id="reviews-count"></p>
+          </div>
+
+          <div class="reviews-layout">
+            <div class="reviews-list reveal" id="reviews-list">
+              <p class="reviews-empty" id="reviews-empty">
+                Ainda não há avaliações. Seja a primeira pessoa a comentar.
+              </p>
+            </div>
+
+            <form class="review-form reveal" id="review-form" novalidate>
+              <h3>Deixar avaliação</h3>
+              <label>
+                Nome ou Instagram
+                <input
+                  id="review-author"
+                  name="author"
+                  type="text"
+                  maxlength="80"
+                  required
+                  autocomplete="nickname"
+                  placeholder="Maria ou @maria"
+                />
+              </label>
+
+              <fieldset class="star-field">
+                <legend>Nota (1 a 5)</legend>
+                <div class="star-picker" id="star-picker" role="radiogroup" aria-label="Nota de 1 a 5">
+                  <button type="button" class="star-btn" data-rating="1" aria-label="1 estrela">★</button>
+                  <button type="button" class="star-btn" data-rating="2" aria-label="2 estrelas">★</button>
+                  <button type="button" class="star-btn" data-rating="3" aria-label="3 estrelas">★</button>
+                  <button type="button" class="star-btn" data-rating="4" aria-label="4 estrelas">★</button>
+                  <button type="button" class="star-btn" data-rating="5" aria-label="5 estrelas">★</button>
+                </div>
+                <input type="hidden" id="review-rating" name="rating" value="" required />
+              </fieldset>
+
+              <label>
+                Comentário
+                <textarea
+                  id="review-comment"
+                  name="comment"
+                  maxlength="500"
+                  rows="4"
+                  required
+                  placeholder="Conte como foi a experiência…"
+                ></textarea>
+              </label>
+
+              <p class="review-form-msg" id="review-form-msg" hidden></p>
+              <button class="btn btn-solid" type="submit" id="review-submit">
+                Publicar avaliação
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-dark grain" id="contato">
         <div class="container contact-panel">
           <div class="reveal">
@@ -155,10 +233,13 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <img src="assets/brand/logo-white.svg" alt="" width="72" height="28" />
+          <img src="assets/brand/logo-mark.png" alt="" width="72" height="72" />
           <span id="footer-name">Luan Albuquerque Fotografia</span>
         </div>
-        <p>© <span id="year"></span> — Todos os direitos reservados.</p>
+        <div class="footer-meta">
+          <p>© <span id="year"></span> — Todos os direitos reservados.</p>
+          <a class="footer-admin" href="admin.html">Área do fotógrafo</a>
+        </div>
       </div>
     </footer>
 
@@ -176,7 +257,10 @@
       </svg>
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/supabase-client.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

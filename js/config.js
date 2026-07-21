@@ -37,12 +37,6 @@ window.SITE_CONFIG = {
 
   services: [
     {
-      id: "eventos",
-      title: "Eventos",
-      description: "Cobertura completa com narrativa visual e presença discreta.",
-      icon: "assets/icons/eventos.png",
-    },
-    {
       id: "ensaios",
       title: "Ensaios externos",
       description: "Luz natural, locais com personalidade e direção leve.",
@@ -67,12 +61,6 @@ window.SITE_CONFIG = {
       icon: "assets/icons/familia.png",
     },
     {
-      id: "corporativo",
-      title: "Corporativo",
-      description: "Retratos e eventos de marca com estética profissional.",
-      icon: "assets/icons/masculino.png",
-    },
-    {
       id: "familia",
       title: "Ensaio de família",
       description: "Conexão real entre gerações, em imagens que aquecem.",
@@ -84,6 +72,18 @@ window.SITE_CONFIG = {
       description: "A química do casal, sem pressa e com muita intenção.",
       icon: "assets/icons/feminino.png",
     },
+    {
+      id: "corporativo",
+      title: "Corporativo",
+      description: "Retratos e eventos de marca com estética profissional.",
+      icon: "assets/icons/masculino.png",
+    },
+    {
+      id: "eventos",
+      title: "Eventos",
+      description: "Cobertura completa com narrativa visual e presença discreta.",
+      icon: "assets/icons/eventos.png",
+    },
   ],
 
   /**
@@ -91,11 +91,11 @@ window.SITE_CONFIG = {
    * Quando tiver fotos reais: image: "assets/photos/casamento-01.jpg"
    */
   portfolio: [
-    { id: "p1", label: "Casamento", ratio: "3/4", image: "" },
-    { id: "p2", label: "Gestante", ratio: "4/5", image: "" },
-    { id: "p3", label: "Família", ratio: "3/2", image: "" },
-    { id: "p4", label: "Ensaio externo", ratio: "4/5", image: "" },
-    { id: "p5", label: "Eventos", ratio: "3/2", image: "" },
-    { id: "p6", label: "Pré-wedding", ratio: "3/4", image: "" },
+    { id: "portfolio_1", label: "Casamento", ratio: "9/16", image: "" },
+    { id: "portfolio_2", label: "Gestante", ratio: "1/1", image: "" },
+    { id: "portfolio_3", label: "Família", ratio: "16/9", image: "" },
+    { id: "portfolio_4", label: "Ensaio externo", ratio: "9/16", image: "" },
+    { id: "portfolio_5", label: "Eventos", ratio: "16/9", image: "" },
+    { id: "portfolio_6", label: "Pré-wedding", ratio: "1/1", image: "" },
   ],
 };

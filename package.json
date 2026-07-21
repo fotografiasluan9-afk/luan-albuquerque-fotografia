@@ -1,5 +1,11 @@
 {
   "name": "luan-albuquerque-fotografia",
   "private": true,
-  "description": "Site oficial Luan Albuquerque Fotografia"
+  "description": "Site oficial Luan Albuquerque Fotografia",
+  "scripts": {
+    "dev": "npx --yes serve -l 4173 ."
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.38.1"
+  }
 }
